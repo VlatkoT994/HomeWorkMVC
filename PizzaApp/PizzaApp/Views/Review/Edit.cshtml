@@ -1,0 +1,15 @@
+﻿@model PizzaApp.Models.ViewModels.ReviewViewModel
+
+    <form asp-controller="Review" asp-action="Update">
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="CustomerId" />
+        <input type="hidden" asp-for="Customer" />
+        <input type="hidden" asp-for="DateMade" />
+        <div class="form-group">
+            <label asp-for="Comment"></label>
+            <textarea asp-for="Comment" class="form-control"></textarea>
+            <span asp-validation-for="Comment" class="text-danger"></span>
+        </div>
+        <input type="submit" class="btn btn-primary" value="Save" />
+        <a asp-controller="Review" asp-action="Index" class="btn btn-warning">Cancel</a>
+    </form>
